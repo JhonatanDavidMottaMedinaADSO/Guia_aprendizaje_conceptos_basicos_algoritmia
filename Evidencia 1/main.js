@@ -1,20 +1,21 @@
 addEventListener("DOMContentLoaded", () =>{
 
     let myForm = document.querySelector("form")
-    let contenido = document.querySelector("tbody")
-    let tabla = document.querySelector("table")
+    let rta =document.querySelector("span")
 
     myForm.addEventListener("submit", (e) =>{
         e.preventDefault();
 
     let dataInput = Object.fromEntries(new FormData(e.target));   
 
-        contenido.insertAdjacentHTML("beforeend",`
-        <tr>
-            <td>${dataInput.hora}</td>
-            <td>${dataInput.actividad}</td>
-        </tr>`)
-
+    if (dataInput.grados == "f") {
+        let faC = new Decimal((dataInput.valor - 32) * 5/9)
+        rta.innerHTML = `${dataInput.valor}°F a °C son ${faC.toDecimalPlaces(3)}°C`
+    }
+    else {
+        let caF = new Decimal((dataInput.valor * 9/5) + 32)
+        rta.innerHTML = `${dataInput.valor}°C a °F son ${caF.toDecimalPlaces(3)}°F`
+    }
     })
     
 })

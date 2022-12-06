@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 
 <head>
     <meta charset="UTF-8">
@@ -7,30 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <script src="decimal.js"></script>
     <title>Conceptos Basicos Algoritmia</title>
 </head>
 
 <body>
-    <h1>Plan para llegar a tiempo</h1>
+    <h1>Farenheit a Celsius</h1>
     <p>
-        Suponiendo que nos encontramos descansando en una nuestra casa en una ciudad de Colombia requiero hacer un plan
-        detallado para llegar a tiempo a mi sitio de trabajo el día siguiente.
-    </p>
+        Se desea elaborar un algoritmo que permita determinar la temperatura equivalente en grados centígrados a
+        la cantidad de grados Fahrenheit actuales en la ciudad de New York.
     <form>
-        <label>Digita la activad:</label>
-        <input type="text" name="actividad">
-        <input type="time" name="hora">
+        <input type="radio" name="grados" value="f">
+        <label>Farenheit</label>
+        <input type="radio" name="grados" value="c">
+        <label>Celsius</label>
+        <input type="text" name="valor">
         <input type="submit" value="Enviar">
     </form>
-    <table>
-        <thead>
-            <tr>
-                <th>Hora</th>
-                <th>Actividad</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <span></span>
 </body>
 
 </html>
