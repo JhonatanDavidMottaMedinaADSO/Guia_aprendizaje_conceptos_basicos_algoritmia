@@ -4,26 +4,39 @@
     font-family: 'Poppins', sans-serif;
     margin-left: 5px;
 }
+
 h1 {
-    color: rgb(202, 84, 223);
+    color: #006253;
 }
-table{
+
+table {
     margin: 25px 5px;
+    border-collapse: collapse;
 }
-table thead tr{
-    background: #3794fe;
+
+table thead tr {
+    background: #006253;
+    color: #fff;
 }
 
 table thead tr th {
-
- padding: 2px 10px;
- text-align: center;
-}
-
-table tbody tr{
+    border: 1px solid black;
+    padding: 2px 10px;
     text-align: center;
-    background: rgb(191, 236, 234);
 }
-table tbody tr td{
-    border-color:1px solid black;
+
+table tbody tr {
+    text-align: center;
+}
+
+table tbody tr td {
+    border: 1px solid black;
+}
+
+table tbody tr:nth-child(2n+1) {
+    background: #fff;
+}
+
+table tbody tr:nth-child(2n) {
+    background: #dedee0;
 }
