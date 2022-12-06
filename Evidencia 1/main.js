@@ -1,20 +1,19 @@
 addEventListener("DOMContentLoaded", () =>{
 
-
-    let answer = document.querySelector(".rta")
     let myForm = document.querySelector("form")
+    let contenido = document.querySelector("tbody")
+    let tabla = document.querySelector("table")
 
     myForm.addEventListener("submit", (e) =>{
-
         e.preventDefault();
 
-        let dataInput = Object.fromEntries(new FormData(e.target));
+    let dataInput = Object.fromEntries(new FormData(e.target));   
 
-        let confi = Intl.NumberFormat('de-DE', {style: 'currency', currency: 'COP', minimumFractionDigits:0});
-        
-        let pesoCol = Math.round(Number(dataInput.dolares) * 4821.09)
-
-        answer.innerHTML = `${confi.format(pesoCol)}`
+        contenido.insertAdjacentHTML("beforeend",`
+        <tr>
+            <td>${dataInput.hora}</td>
+            <td>${dataInput.actividad}</td>
+        </tr>`)
 
     })
     
